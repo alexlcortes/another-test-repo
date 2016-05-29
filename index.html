@@ -1,0 +1,190 @@
+
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Candidus-Informatio</title>
+
+	<!-- Compiled and minified CSS -->
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+	<link href='https://fonts.googleapis.com/css?family=Acme|Abril+Fatface|Oleo+Script:400,700|Montserrat:400,700|Timmana' rel='stylesheet' type='text/css'>	
+
+  	<!-- font awesome -->
+  	<link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css" type="text/css">
+
+	<!-- reset css src -->
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+	<!-- materialize cdn -->
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css"> -->
+
+	<!-- material+icons -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- style css src -->
+ 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+ 	<!-- jquery cdn -->
+ 	<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+
+ 	<!-- ****** FireBase Src Link ****** -->
+	<script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+
+
+	<!-- amCharts custom font -->
+	<link href='http://fonts.googleapis.com/css?family=Covered+By+Your+Grace' rel='stylesheet' type='text/css'>
+
+	<!-- amCharts javascript sources -->
+	<script type="text/javascript" src="http://www.amcharts.com/lib/3/amcharts.js"></script>
+	<script type="text/javascript" src="http://www.amcharts.com/lib/3/pie.js"></script>
+	<script type="text/javascript" src="http://www.amcharts.com/lib/3/themes/chalk.js"></script>
+
+
+</head>
+<body>
+
+<nav id="bar" class="red darken-2">
+	<div class="nav-wrapper">
+		<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+		<ul id="nav-mobile" class="left hide-on-med-and-down">
+			<li class="navItems"><a class="page-scroll" href="#bar">C-I</a></li>
+			<li class="navItems"><a class="page-scroll" href="#main-input">Search</a></li>
+			<li class="navItems"><a class="page-scroll" href="#contactSpace">Contact Us</a></li>
+		</ul>
+		<ul class="side-nav" id="mobile-demo">
+			<li class="navItems"><a class="page-scroll" href=".title">C-I</a></li>
+			<li class="navItems"><a class="page-scroll" href="#main-input">Search</a></li>
+			<li class="navItems"><a class="page-scroll" href="#contactSpace">Contact Us</a></li>
+		</ul>
+	</div>
+</nav>
+
+<form id="labnol" method="get">
+	<div class="row">
+		<h1 id="title" class="col s12 m12 l12 center">Candidus-Informatio</h1>
+		<div class="speech input-field transparent container" id="submitDiv">
+			<input name="q" placeholder="address..." id="addressInput" type="text" class="validate">
+			<label for="address-input"></label>
+			<i onclick="startDictation()" class="fa fa-microphone mic-color" aria-hidden="true"></i>
+			<br>
+			<!-- Modal Trigger from materialize example -->
+			<a class="waves-effect waves-light btn blue darken-2 modal-trigger" id="submitAddress" data-target="modal2">Search</a>
+		</div>
+	</div>
+</form>
+
+<div>
+	<div id="chartdiv"></div>
+</div>
+
+<div id="main-input">
+	<div class="row">
+		<!-- Tabs for search results -->
+		<div class="col s12 m12 l12 container">
+      		<ul class="tabs">
+		        <li class="tab col s3" data-filter="all"><a href="#test1">All</a></li>
+		        <li class="tab col s3" data-filter="federal"><a href="#test2">Federal</a></li>
+		        <li class="tab col s3" data-filter="state"><a href="#test3">State</a></li>
+		        <li class="tab col s3" data-filter="local"><a href="#test4">Local</a></li>
+     		 </ul>
+    	</div>
+		<div class="col s12">
+			<div id="repInfo"></div>
+			<div id="articles"> </div>
+		</div>
+	</div>
+
+	<!-- Modal Structure -->
+	<div id="modal1" class="modal modalLG">
+		<div class="modal-content">
+			<div class="container">
+				<div class="row">
+					<div class ="col l12">
+						<div id="wikiInfo"> </div>
+						<div id="removeEnd"></div>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>
+
+	<div id="modal2" class="modal">
+		<div class="modal-content">
+			<h4>Confirm Address!</h4>
+			<p id="userAddress"></p>
+			<div class="modal-footer">
+			    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">ReEnter</a>
+      			<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" id="commenceQuery">Proceed</a>
+    		</div>
+		</div>
+	</div>
+</div>
+
+<div id="contactSpace" class="contact-space">
+	<div class="container">
+		<div class="row">
+			<div class="col s12 m4 l4">
+				<div class="card-panel hoverable">
+					<div class="card-content center">
+						<h3 class="card-title contactName">Jonathan Stewart</h3>
+						<img class="jonImage responsive-img" src="assets/images/jon.jpg" alt="bio-pic">
+							<div class="modal-footer">
+									<a href="https://www.linkedin.com/in/jonathan-stewart-95a597120"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+									<a href="https://github.com/jstewart0788"><i class="fa fa-github fa-2x"></i></a>
+								</div>
+							</div>
+					</div>
+				</div>
+			<div class="col s12 m4 l4">
+				<div class="card-panel hoverable">
+					<div class="card-content center">
+						<h3 class="card-title contactName">Richard Garcia</h3>
+						<img class="richImage responsive-img" src="assets/images/rich.jpg" alt="bio-pic">
+						<div class="modal-footer">
+							<a href="https://www.linkedin.com/in/richard-garcia-b8509864"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+							<a href="https://github.com/FlyMoe"><i class="fa fa-github fa-2x"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col s12 m4 l4">
+				<div class="card-panel hoverable">
+					<div class="card-content center">
+						<h3 class="card-title contactName">Alejandro Cortes</h3>
+						<img class="alexImage responsive-img" src="assets/images/alex.jpg" alt="bio-pic">
+							<div class="modal-footer">
+								<a href="https://www.linkedin.com/in/alejandrolcortes"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+								<a href="https://github.com/alexlcortes"><i class="fa fa-github fa-2x"></i></a>
+							</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+<!-- javascript src -->
+<script type="text/javascript" src="assets/javascript/app.js"></script>
+
+<!-- javascript firebase src -->
+<script type="text/javascript" src="assets/javascript/firebase.js"></script>
+
+<!-- added footer with red color -->
+<footer class="page-footer blue darken-2">
+	<div class="container">
+		<div class="footer-copyright">
+			Copyright &copy; 2016 Candidus-Informatio.com | All rights reserved.
+		</div>
+	</div>
+</footer>
+</body>
+</html>

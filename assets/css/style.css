@@ -1,0 +1,159 @@
+
+#demo {
+	width: 30px;
+}
+
+#rep {
+	width: 40px;
+}
+
+#youTubeIcon {
+	color: #cc181e;
+	padding-right: 5px;
+}
+
+body {
+	font-size: 20px;
+}
+.modalLG {
+	width: 90%;
+	text-align: left;
+}
+
+#faceIcon {
+	color: #365899;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+#twitterIcon {
+	padding-right: 5px;
+}
+
+.officeHeader {
+	color: white;
+	background: #1976D2 !important;
+}
+.listHeader {
+	color: white;
+	background: #D32F2F !important;
+}
+
+.repHeader {
+	font-weight: 900;
+	font-family: 'Oleo Script', cursive;
+}
+
+.art {
+	float: right;
+}
+
+.imgCanidates {
+	/*float: left;*/
+}
+
+.infobox {
+	float:right;
+	margin:15px;
+}
+
+.navItems {
+	/*font-family: 'Acme', sans-serif;*/
+	/*font-family: 'Abril Fatface', cursive;*/
+	/*font-family: 'Oleo Script', cursive;*/
+	font-family: 'Montserrat', sans-serif;
+}
+
+.listHeader {
+	font-weight: 900;
+	font-size: 35px;
+}
+
+#submitAddress {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.jonImage {
+	width: 100px;
+	height: 100px;
+}
+
+.richImage {
+	width: 100px;
+	height: 100px;
+}
+
+.alexImage {
+	width: 100px;
+	height: 100px;
+}
+
+.contactName {
+	color: #1976d2;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.tabs {
+	font-family: 'Montserrat', sans-serif;
+}
+
+#demo5 {
+	width: 60px;
+}
+
+#rep5 {
+	width: 70px;
+}
+
+/*chart stuff*/
+
+}
+#sidebar {
+    width: 100px;
+    background: gray;
+    float: right;
+    margin-left: 30px;
+}
+
+#labnol {
+   	background-image: url(../images/capitol-building1.jpg);
+   	background-size: 100%;
+   	padding-top: 40px;
+   	padding-bottom: 40px;
+}
+
+.contact-space {
+	background-image: url(../images/capitol-building3.jpg);
+	padding-bottom: 40px;
+	padding-top: 40px;
+}
+
+#title {
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.mic-color {
+	color:	white;
+}
+
+#addressInput {
+	width: 400px;
+}
+
+#bar {
+	height: 50px;
+}
+
+/* voice recognition */
+.speech input {border: 0; width: 370px; display: inline-block; height: 30px;}
+.speech img {float: right; width: 40px }
+
+#chartdiv {
+	width: 100%;
+	height: 300px;
+}
+
+
+
+
