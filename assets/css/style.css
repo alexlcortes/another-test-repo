@@ -116,7 +116,7 @@ body {
 }
 
 #labnol {
-   	background-image: url(../images/capitol-building1.jpg);
+   	background-image: url(../images/lincon3.jpg);
    	background-size: 100%;
    	padding-top: 40px;
    	padding-bottom: 40px;
@@ -136,7 +136,7 @@ body {
 }
 
 .mic-color {
-	color:	white;
+	color:	#1976d2;
 }
 
 #addressInput {
