@@ -46,23 +46,12 @@
 
 <nav id="bar" class="red darken-2">
 	<div class="nav-wrapper">
-		<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-		<ul id="nav-mobile" class="left hide-on-med-and-down">
-			<li class="navItems"><a class="page-scroll" href="#bar">C-I</a></li>
-			<li class="navItems"><a class="page-scroll" href="#main-input">Search</a></li>
-			<li class="navItems"><a class="page-scroll" href="#contactSpace">Contact Us</a></li>
-		</ul>
-		<ul class="side-nav" id="mobile-demo">
-			<li class="navItems"><a class="page-scroll" href=".title">C-I</a></li>
-			<li class="navItems"><a class="page-scroll" href="#main-input">Search</a></li>
-			<li class="navItems"><a class="page-scroll" href="#contactSpace">Contact Us</a></li>
-		</ul>
+		<h1 id="title" class="center">Candidus-Informatio</h1>
 	</div>
 </nav>
 
 <form id="labnol" method="get">
 	<div class="row">
-		<h1 id="title" class="col s12 m12 l12 center">Candidus-Informatio</h1>
 		<div class="speech input-field transparent container" id="submitDiv">
 			<input name="q" placeholder="address..." id="addressInput" type="text" class="validate">
 			<label for="address-input"></label>
@@ -81,7 +70,7 @@
 <div id="main-input">
 	<div class="row">
 		<!-- Tabs for search results -->
-		<div class="col s12 m12 l12 container">
+		<div id="tabs-place" class="col s12 m12 l12 container">
       		<ul class="tabs">
 		        <li class="tab col s3" data-filter="all"><a href="#test1">All</a></li>
 		        <li class="tab col s3" data-filter="federal"><a href="#test2">Federal</a></li>
